@@ -49,13 +49,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Jay Antoney <jayantoney@gmail.com>" \
+    maintainer="ViperRNMC" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Jays Home Assistant Add-ons" \
-    org.opencontainers.image.authors="Jay Antoney <jayantoney@gmail.com>" \
+    org.opencontainers.image.vendor="ViperRNMC Add-ons" \
+    org.opencontainers.image.authors="ViperRNMC" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/Jays-Home-Assistant-Add-ons" \
+    org.opencontainers.image.url="https://github.com/ViperRNMC" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
