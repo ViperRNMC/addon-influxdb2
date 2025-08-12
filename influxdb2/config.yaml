@@ -1,12 +1,12 @@
 ---
 name: InfluxDB2
-version: 2.7.12
+version: 1.0.3
 slug: influxdb2
 description: Scalable datastore for metrics, events, and real-time analytics. Running InfluxDB v2.x.
 url: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2
 panel_icon: mdi:chart-areaspline
 startup: services
-homeassistant: 0.92.0b2
+homeassistant: 2024.2.0
 hassio_api: true
 arch:
   - aarch64
