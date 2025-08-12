@@ -2,7 +2,6 @@
 
 ![Project Stage][project-stage-shield]
 ![Maintenance][maintenance-shield]
-[![License][license-shield]](LICENSE.md)
 
 
 ## About
@@ -68,3 +67,4 @@ If you're after InfluxDB v1.x [see here][influxdbv1]
 [influxdb2-doc]: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2/DOCS.md
 
 [influxdb2-addon]: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2
+
