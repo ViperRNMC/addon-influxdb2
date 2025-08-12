@@ -30,7 +30,6 @@ https://github.com/ViperRNMC/hass-addon
 
 ### &#10003; [InfluxDB2][influxdb2-addon]
 
-![Latest Version][influxdb2-releases-shield]
 ![Supports amd64 Architecture][influxdb2-amd64-shield]
 ![Supports aarch64 Architecture][influxdb2-aarch64-shield]
 ![Supports armhf Architecture][influxdb2-armhf-shield]
@@ -67,4 +66,5 @@ If you're after InfluxDB v1.x [see here][influxdbv1]
 [influxdb2-i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 
 [influxdb2-doc]: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2/DOCS.md
+
 [influxdb2-addon]: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2
