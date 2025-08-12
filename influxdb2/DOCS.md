@@ -11,11 +11,11 @@ For InfluxDB v1.x build channel, remove this add-on and install https://github.c
 
 ## Installation
 
-This add-on doesn't come from the commmunity store and needs to be added from a GitHub repository. Don't worry - the process isn't too hard!
+This add-on doesn't come from the commmunity store and needs to be added from a GitHub repository.
 
 1. Within Home Assistant, navigate to **Configuration** > ** Add-ons, Backups & Supervisor** 
 1. Click **ADD-ON STORE** > **Menu** (3 dot elipsis, top right) > **Repositories**
-1. Add the following Repository: https://github.com/Jays-Home-Assistant-Add-ons/repository
+1. Add the following Repository: https://github.com/ViperRNMC/hass-addon
 1. Install the InfluxDB2 add-on
 1. After install, click **Start**
 1. Check the logs tab to see if everything went well.
@@ -237,7 +237,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2022 Jay Antoney
+Copyright (c) 2025 ViperRNMC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -256,13 +256,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-[contributors]: https://github.com/Jays-Home-Assistant-Add-ons/j-addon-influxdb2/graphs/contributors
-[discord-ha]: https://discord.gg/c5DvZ4e
-[frenck]: https://github.com/frenck
-[issue]: https://github.com/Jays-Home-Assistant-Add-ons/j-addon-influxdb2/issues
-[reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/Jays-Home-Assistant-Add-ons/j-addon-influxdb2/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
-[discussion]: https://github.com/Jays-Home-Assistant-Add-ons/j-addon-influxdb2/discussions
-[jantoney]: https://github.com/jantoney
