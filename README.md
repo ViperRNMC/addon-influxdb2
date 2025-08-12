@@ -1,4 +1,4 @@
-# Jay's Home Assistant Add-ons
+# Home Assistant Add-ons
 
 ![Project Stage][project-stage-shield]
 ![Maintenance][maintenance-shield]
@@ -54,12 +54,10 @@ If you're after InfluxDB v1.x [see here][influxdbv1]
 
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[license-shield]: https://img.shields.io/github/license/Jays-Home-Assistant-Add-ons/repository.svg
 [influxdbv1]: https://github.com/hassio-addons/addon-influxdb
 [repositoryCommunity]: https://github.com/hassio-addons/repository
 
 [comment]: <> (-- INFLUXDB2 --)
-[influxdb2-releases-shield]: https://img.shields.io/github/release/Jays-Home-Assistant-Add-ons/j-addon-influxdb2.svg
 [influxdb2-local-build]: https://img.shields.io/badge/Home%20Assistant%20--%20local%20build-YES-orange.svg
 [influxdb2-ingressSupport]: https://img.shields.io/badge/Home%20Assistant%20--%20ingress%20support-NO-red
 [influxdb2-aarch64-shield]: https://img.shields.io/badge/aarch64-untested-orange.svg
@@ -68,5 +66,5 @@ If you're after InfluxDB v1.x [see here][influxdbv1]
 [influxdb2-armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
 [influxdb2-i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 
-[influxdb2-doc]: https://github.com/Jays-Home-Assistant-Add-ons/j-addon-influxdb2/blob/main/README.md
-[influxdb2-addon]: https://github.com/Jays-Home-Assistant-Add-ons/j-addon-influxdb2
+[influxdb2-doc]: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2/DOCS.md
+[influxdb2-addon]: https://github.com/ViperRNMC/hass-addon/blob/main/influxdb2

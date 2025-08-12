@@ -6,5 +6,5 @@
 - Added InfluxDB CLI.
 
 ### Changed
-- Upgraded to InfluxDB 2.4.0
-- Updated base image to 6.1.2
+- Upgraded to InfluxDB 2.7.12
+- Updated base image to 7.8.3
