@@ -1,37 +1,38 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.1.2
-# hadolint ignore=DL3006
+ARG BUILD_ARCH=${BUILD_ARCH:-aarch64}
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/${BUILD_ARCH}:7.8.3
 FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base system
-ARG BUILD_ARCH=amd64
-
-RUN \
-    apt-get update \
-    && ARCH="${BUILD_ARCH}" \
-    && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi \
-    \
-    && INFLUXDB="2.4.0" \
-    && curl -J -L -o /tmp/influxdb2.deb \
-        "https://dl.influxdata.com/influxdb/releases/influxdb2-${INFLUXDB}-${ARCH}.deb" \
-    \
-    && curl -J -L -o /tmp/influxdb-cli.deb \
-        "https://dl.influxdata.com/influxdb/releases/influxdb2-client-${INFLUXDB}-${ARCH}.deb" \
-    && dpkg --install /tmp/influxdb2.deb \
-    && dpkg --install /tmp/influxdb-cli.deb \
-    \
-    && rm -fr \
-        /tmp/* \
-        /var/{cache,log}/* \
-        /var/lib/apt/lists/* \
-    \
-    && mkdir -p /data/influxdb2/engine
-
+ARG BUILD_ARCH=${BUILD_ARCH:-aarch64}
+ARG INFLUXDB=2.7.12
 
 # Copy root filesystem
 COPY rootfs /
+
+RUN \
+    export DEBIAN_FRONTEND=noninteractive \
+    && apt update \
+    && apt upgrade -y \
+    && case "${BUILD_ARCH}" in \
+        aarch64) ARCH="arm64" ;; \
+        amd64)  ARCH="amd64" ;; \
+        *) echo "Unsupported architecture: ${BUILD_ARCH}"; exit 1 ;; \
+    esac \
+    && INFLUXDB_FILE="influxdb2_${INFLUXDB}-1_${ARCH}.deb" \
+    && INFLUXDB_CLI_FILE="influxdb2-client-${INFLUXDB}-1_${ARCH}.deb" \
+    && URL_BASE="https://dl.influxdata.com/influxdb/releases/v${INFLUXDB}" \
+    \
+    && curl -f -J -L -o /tmp/influxdb2.deb "${URL_BASE}/${INFLUXDB_FILE}" || { echo "InfluxDB package not found: ${URL_BASE}/${INFLUXDB_FILE}"; exit 1; } \
+    \
+    && dpkg --install /tmp/influxdb2.deb \
+    && rm -fr /tmp/* /var/{cache,log}/* /var/lib/apt/lists/* \
+    && mkdir -p /data/influxdb2/engine \
+    && chmod +x /etc/cont-init.d/influxdb.sh \
+    && chmod +x /etc/services.d/influxdb/run \
+    && chmod +x /etc/services.d/influxdb/finish
 
 # Build arguments
 ARG BUILD_ARCH

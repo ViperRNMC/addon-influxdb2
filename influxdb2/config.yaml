@@ -15,7 +15,6 @@ init: false
 map:
   - share:rw
   - ssl
-  - "addon_configs/influxdb2:/data:rw"
 ports:
   8086/tcp: 8086
 ports_description:

@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Jays Home Assistant Add-on: InfluxDB2
+# Home Assistant Add-on: InfluxDB2
 # Configures InfluxDB2
 # ==============================================================================
 declare certfile
